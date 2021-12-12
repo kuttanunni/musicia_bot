@@ -43,7 +43,7 @@ db = Database()
 
 START_TEXT = """ `Hai {}, 
 I'm sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
-  𝙸 𝚊𝚖 𝚊 𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 𝚢𝚝 𝚟𝚒𝚍𝚎𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚊 𝚙𝚞𝚋𝚕𝚒𝚌 𝚋𝚘𝚝 𝚢𝚘𝚞 𝚊𝚍𝚍 𝚖𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝚖𝚎 𝚊𝚗 𝚊𝚍𝚖𝚒𝚗 𝚊𝚗𝚍 𝙸 𝚠𝚒𝚕𝚕 𝚜𝚎𝚗𝚍 𝚖𝚞𝚜𝚒𝚌𝚜 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ ❤️ 𝐵𝑦 @Lallu_tg!"""
+  𝙸 𝚊𝚖 𝚊 𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 VC Music player 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚊 𝚙𝚞𝚋𝚕𝚒𝚌 𝚋𝚘𝚝 𝚢𝚘𝚞 𝚊𝚍𝚍 𝚖𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝚖𝚎 𝚊𝚗 𝚊𝚍𝚖𝚒𝚗 𝚊𝚗𝚍 𝙸 𝚠𝚒𝚕𝚕 𝚜𝚎𝚗𝚍 𝚖𝚞𝚜𝚒𝚌𝚜 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ 𝐵𝑦 @Unni0240"""
 
 CMDS_TEXT = """
 `Here It is The List of Commamds and Its usage.`
@@ -62,10 +62,10 @@ CMDS_TEXT = """
 """
 
 ABOUT_TEXT = """
-- **𝐍𝐚𝐦𝐞 :** 𝐒𝐄𝐋𝐄𝐍𝐀 𝐆𝐎𝐌𝐄𝐒
-- **Creator :** [ʟᴀʟʟᴜᵗᵍ](https://Github.com/lallu_tg)
-- **Support :** [CLICK HERE](https://telegram.me/Annaben_support)
-- **Source :** [CLICK HERE](https://github.com/Lallu-lallus/musicia_bot)
+- **𝐍𝐚𝐦𝐞 :** Shouko Nishimiya
+- **Creator :** [Amal](https://t.me/Unni0240)
+- **Support :** [CLICK HERE](https://t.me/cinima_lokham)
+- **Source :** [CLICK HERE](https://t.me/@ShoukoNishimiya_bot)
 - **Language :** [Python3](https://python.org)
 - **Library :** [Pyrogram](https://pyrogram.org)
 - **Server :** [Heroku](https://heroku.com)
@@ -169,7 +169,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔🙂`')
+    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... I find your song`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -214,7 +214,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'❍📖 <b>Title:</b> <a href="{link}">{title}</a>\n❍⌚ <b>Duration:</b> <code>{duration}</code>\n❍📤 <b>Uploaded By:</b> <a href="https://t.me/Music_wrld_grp">MUSIC WORLD😉</a>\n❍ <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲:</b> {message.from_user.mention()}'
+        rep = f'❍📖 <b>Title:</b> <a href="{link}">{title}</a>\n❍⌚ <b>Duration:</b> <code>{duration}</code>\n❍📤 <b>Uploaded By:</b> <a href="https://t.me/musicfinderbotgroup">Melody Café 🎼</a>\n❍ <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲:</b> {message.from_user.mention()}'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -222,7 +222,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**Something Went Wrong Report This at @LALLU_TG!!**')
+        m.edit('**Something Went Wrong Report This at @Unni0240!**')
         print(e)
     try:
         os.remove(audio_file)
